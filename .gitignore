@@ -1,0 +1,44 @@
+# Byte-compiled / packaging
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project artifacts
+checkpoint/
+runs/
+log/
+result/
+data/
+examples/*.jpg
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
+
+# Logs
+*.log
+wandb/
+mlruns/

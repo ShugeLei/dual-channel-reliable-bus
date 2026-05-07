@@ -1,0 +1,11 @@
+torch>=1.13
+torchvision>=0.14
+# OpenCV with ximgproc — needed for SLIC. opencv-python alone is NOT enough.
+opencv-contrib-python>=4.6
+numpy>=1.22
+scipy>=1.9
+Pillow>=9.0
+matplotlib>=3.5
+seaborn>=0.12
+tqdm>=4.62
+PyYAML>=6.0

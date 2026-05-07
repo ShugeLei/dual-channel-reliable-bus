@@ -1,0 +1,56 @@
+# Default configuration. Values match the original release's defaults.
+
+dataset:
+  name: YBUS              # YBUS | BUSI
+  root: /data/YBUS
+  mask_root: /data/predicted_masks
+  num_classes: 2
+  image_size: 224
+
+classifier:
+  model: resnet50         # resnet50 | vgg16 | vit_b_16 | any torchvision name
+  pretrained: true
+
+training:
+  epochs: 100
+  batch_size: 64
+  lr: 1.0e-4
+  momentum: 0.9
+  optimizer: sgd
+  scheduler: reduce_on_plateau
+  acc_threshold: 0.91     # Min val acc to trigger checkpoint save
+  loss_save_threshold: 0.1
+  n_sweep: 20             # 4×5 random LR/batch combinations
+  seed: 1
+
+sp_risa:
+  n_mask: 3000            # Original code default (Table I lists 4000)
+  region_size: 30         # SLIC region_size (Table I)
+  ruler: 20               # SLIC compactness ruler
+  iterations: 10          # SLIC iterations (Table I)
+  batch_size: 200         # Forward batch for masked variants
+
+irs:
+  enlarge_factor: 1.21    # Per-paper §III-C, Chinese BC guidelines
+  # The threshold count is dynamic = |M_pro|, no top_fraction parameter.
+
+prs:
+  max_retries: 10         # Per-augmentation retry budget for mask preservation
+  mask_tolerance: 10      # Allowed mask shrinkage in pixels
+
+drs:
+  mu: 0.5                 # IRS weight in DRS = mu*IRS + (1-mu)*PRS
+  temperature: 8          # Softmax temperature for confidence ECE baseline
+  threshold: 0.8          # DRS gating threshold for screening report
+
+ece:
+  num_bins: 10            # For *_bin variants; ignored by *_sweep variants
+  variants:
+    - ew_ece_bin
+    - em_ece_bin
+    - ew_ece_sweep
+    - em_ece_sweep
+
+reliable_soup:
+  threshold: 0.4          # Per-parameter inclusion probability for partial fusion
+  samples: 50             # Random sweep over thresholds

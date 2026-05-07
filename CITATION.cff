@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+title: >-
+  Dual-Channel Reliable Breast Ultrasound Image Classification Based on
+  Explainable Attribution and Uncertainty Quantification
+message: >-
+  If you use this software or the underlying method, please cite the
+  paper below.
+type: software
+authors:
+  - family-names: Hu
+    given-names: Haonan
+  - family-names: Lei
+    given-names: Shuge
+  - family-names: Sun
+    given-names: Dasheng
+  - family-names: Zhang
+    given-names: Huabin
+  - family-names: Yuan
+    given-names: Kehong
+  - family-names: Dai
+    given-names: Jian
+  - family-names: Tang
+    given-names: Jijun
+  - family-names: Tong
+    given-names: Yan
+preferred-citation:
+  type: article
+  title: >-
+    Dual-Channel Reliable Breast Ultrasound Image Classification Based
+    on Explainable Attribution and Uncertainty Quantification
+  authors:
+    - family-names: Hu
+      given-names: Haonan
+    - family-names: Lei
+      given-names: Shuge
+    - family-names: Sun
+      given-names: Dasheng
+    - family-names: Zhang
+      given-names: Huabin
+    - family-names: Yuan
+      given-names: Kehong
+    - family-names: Dai
+      given-names: Jian
+    - family-names: Tang
+      given-names: Jijun
+    - family-names: Tong
+      given-names: Yan
+  year: 2023
+license: MIT
+keywords:
+  - breast ultrasound
+  - explainable AI
+  - uncertainty quantification
+  - reliability
+  - SP-RISA
+  - test-time augmentation
+  - model soup

@@ -1,0 +1,17 @@
+# Pinned versions for exact reproducibility.
+# `pip install -r requirements-lock.txt` — use this when comparing to the
+# paper's reported numbers.
+#
+# These versions are known to work together and reflect a Python 3.10 +
+# CUDA 11.8 setup. Adjust torch/torchvision pins for other CUDA versions.
+
+torch==2.1.2
+torchvision==0.16.2
+opencv-contrib-python==4.8.1.78
+numpy==1.26.3
+scipy==1.11.4
+Pillow==10.2.0
+matplotlib==3.8.2
+seaborn==0.13.1
+tqdm==4.66.1
+PyYAML==6.0.1
