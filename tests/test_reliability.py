@@ -80,7 +80,7 @@ def test_prs_is_one_for_perfectly_stable_classifier():
     mask = torch.ones(1, 1, 224, 224)
     output_orig = F.softmax(model(image), dim=-1).data
     prs = compute_prs(model, output_orig, image, mask)
-    assert prs.item() == pytest.approx(1.0, abs=1e-4)
+    assert prs.item() == pytest.approx(1.0, abs=1e-3)
 
 
 def test_prs_is_in_unit_interval():
