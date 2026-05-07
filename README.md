@@ -51,7 +51,7 @@ dual-channel-reliable-bus/
 ## Installation
 
 ```bash
-git clone https://github.com/<your-handle>/dual-channel-reliable-bus.git
+git clone https://github.com/ShugeLei/dual-channel-reliable-bus.git
 cd dual-channel-reliable-bus
 pip install -e .
 ```
