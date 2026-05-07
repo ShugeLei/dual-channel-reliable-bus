@@ -1,6 +1,6 @@
 # Dual-Channel Reliable Breast Ultrasound Image Classification
 
-[![tests](https://github.com/<your-handle>/dual-channel-reliable-bus/actions/workflows/tests.yml/badge.svg)](https://github.com/<your-handle>/dual-channel-reliable-bus/actions/workflows/tests.yml)
+[![tests](https://github.com/ShugeLei/dual-channel-reliable-bus/actions/workflows/tests.yml/badge.svg)](https://github.com/ShugeLei/dual-channel-reliable-bus/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
