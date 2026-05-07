@@ -9,7 +9,7 @@ PyTorch implementation accompanying **"Dual-Channel Reliable Breast Ultrasound I
 > **Reproducing the paper's results?** See [`REPRODUCING.md`](REPRODUCING.md).
 > **Method walkthrough?** See [`docs/method.md`](docs/method.md).
 
-This repository is a reorganized version of the original release ([`uncertainty_classification`](https://github.com/...)) — same algorithms, refactored into an installable package with documentation, type hints, tests, and CI.
+This repository is a reorganized version of the original release ([`uncertainty_classification`](https://github.com/ShugeLei/uncertainty_classification) — same algorithms, refactored into an installable package with documentation, type hints, tests, and CI.
 
 ---
 
