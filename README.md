@@ -129,18 +129,6 @@ python scripts/sprisa_demo.py \
     --save-dir result/sprisa --include-rise
 ```
 
-## Notes
-
-A few details that matter for interpretation but aren't always obvious from the paper text:
-
-1. **SP-RISA is deletion-based**. Each random mask deletes a subset of superpixels; the attribution accumulates `(1 − p_t)` weighted by the *deleted* region. This is the inverse of inclusion-based RISE.
-2. **Mask sampling is stratified.** Bernoulli-per-superpixel sampling is *not* used; instead, masks are drawn in `n/2` strata indexed by drop-rate `(n − 2 − i) / n`.
-3. **IRS uses recall, not IoU.** `IRS = |S ∩ M_pro| / |M_pro|`, where `|S|` is dynamically set to `|M_pro|`.
-4. **`irs = max(irs, prob)`**: at evaluation time, IRS is floored by the model's softmax confidence on the predicted class. This bounds IRS below by prediction confidence.
-5. **Confidence ECE uses temperature scaling** (`T = 8` by default). This makes the "Confidence" baseline weaker than vanilla softmax.
-6. **PRS literal vs. coded form.** The paper writes `PRS = H/log K` (uncertainty); the code writes `1 + Σpᵢ log pᵢ / log K`, which is `1 − H/log K`. We use the coded form so that DRS behaves as a reliability score.
-7. **U-Net masks are pre-computed.** Lesion masks are not segmented inline at test time — they're loaded from a `--mask-root` directory containing `<image_stem>_pred.png` files produced by a separately-trained U-Net.
-
 ## Citation
 
 ```bibtex
